@@ -11,21 +11,15 @@
 	jQuery(document).ready(function() {
 		jQuery('a').click(function() {
 			humanMsg.displayMsg('<strong>Success:</strong> <span class="indent">You clicked \''+jQuery(this).text()+'\'</span>');
+			return false;
 		})
 	})
 	</script>
-	
-	<style>
-		p {
-			margin-top: 100px;
-			text-align: center;
-		}
-	</style>
 </head>
 
 <body>
 
-	<p>
+	<p style="font: 2em Helvetica, Arial, Sans-Serif; margin-top: 400px; text-align: center;">
 		<a href="#">Klaatu</a>
 		<a href="#">Barata</a>
 		<a href="#">Nikto</a>
