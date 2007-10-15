@@ -48,7 +48,7 @@ var humanMsg = {
 		
 			if ( jQuery('#'+humanMsg.logID+' ul').css('display') == 'none') {
 				jQuery('#'+humanMsg.logID+' p').animate({ bottom: 40 }, 200, 'linear', function() {
-					jQuery(this).animate({ bottom: 0 }, 200, 'easeOutBounce', function() { jQuery(this).css({ bottom: 0 }) })
+					jQuery(this).animate({ bottom: 0 }, 300, 'easeOutBounce', function() { jQuery(this).css({ bottom: 0 }) })
 				})
 			}
 			
