@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+	<title>jQuery Sortable List Test</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="humanmsg.js"></script>
+	<link href="humanmsg.css" media="screen" type="text/css" rel="stylesheet">
+
+	<script>
+	jQuery(document).ready(function() {
+		jQuery('a').click(function() {
+			humanMsg.displayMsg('<strong>Success:</strong> <span class="indent">You clicked \''+jQuery(this).text()+'\'</span>');
+		})
+	})
+	</script>
+	
+	<style>
+		p {
+			margin-top: 100px;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+
+	<p>
+		<a href="#">Klaatu</a>
+		<a href="#">Barata</a>
+		<a href="#">Nikto</a>
+	</p>
+
+</body>
+</html>
