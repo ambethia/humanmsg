@@ -1,8 +1,7 @@
 /*
 	HUMANIZED MESSAGES 1.0
-	idea - http://www.humanized.com/weblog/2006/09/11/monolog_boxes_and_transparent_messages/
-	code - http://binarybonsai.com
-	docs - 
+	idea - http://www.humanized.com/weblog/2006/09/11/monolog_boxes_and_transparent_messages
+	home - http://humanmsg.googlecode.com
 */
 
 var humanMsg = {
@@ -85,4 +84,3 @@ var humanMsg = {
 jQuery(document).ready(function(){
 	humanMsg.setup();
 })
-
