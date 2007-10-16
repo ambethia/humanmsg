@@ -26,15 +26,16 @@ var humanMsg = {
 		// Inject the message structure
 		jQuery(appendTo).append('<div id="'+humanMsg.msgID+'" class="humanMsg"><div class="round"></div><p></p><div class="round"></div></div> <div id="'+humanMsg.logID+'"><p>'+logName+'</p><ul></ul></div>')
 		
-		jQuery('#'+humanMsg.logID+' p').click(
-			function() { jQuery(this).siblings('ul').slideToggle() }
-		)
+		jQuery('#'+humanMsg.logID+' p').click( function() {
+			jQuery(this).siblings('ul').slideToggle('50')
+		})
 	},
 
 	displayMsg: function(msg) {
-		if (msg == '')
-			return;
+		// No message, no need to run.
+		if (msg == '') return;
 
+		// Kill the auto-fadeout timer
 		clearTimeout(humanMsg.t2);
 
 		// Inject message
@@ -46,6 +47,7 @@ var humanMsg = {
 				.show().children('ul').prepend('<li>'+msg+'</li>')	// Prepend message to log
 				.children('li:first').slideDown(200)				// Slide it down
 		
+			
 			if ( jQuery('#'+humanMsg.logID+' ul').css('display') == 'none') {
 				jQuery('#'+humanMsg.logID+' p').animate({ bottom: 40 }, 200, 'linear', function() {
 					jQuery(this).animate({ bottom: 0 }, 300, 'easeOutBounce', function() { jQuery(this).css({ bottom: 0 }) })
@@ -75,7 +77,7 @@ var humanMsg = {
 			.unbind('click', humanMsg.removeMsg)
 			.unbind('keypress', humanMsg.removeMsg)
 
-		// If message is fully transparent, fade it out
+		// Only if message is still at peak opacity, fade it out
 		if (jQuery('#'+humanMsg.msgID).css('opacity') == humanMsg.msgOpacity)
 			jQuery('#'+humanMsg.msgID).animate({ opacity: 0 }, 500, function() { jQuery(this).hide() })
 	}
