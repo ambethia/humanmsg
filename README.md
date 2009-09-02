@@ -9,4 +9,7 @@ and is hosted on [Google Code](http://code.google.com/p/humanmsg/).
 The author of this work is [Michael Heilemann](http://binarybonsai.com/), and
 it is licensed under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
+I've included [jQuery Easing v1.3](http://gsgd.co.uk/sandbox/jquery/easing/) by
+George McGinley Smith, release under the BSD License.
+
 Check out the [Demo](http://binarybonsai.com/misc/humanmsg/).
